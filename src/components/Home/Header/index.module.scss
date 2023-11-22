@@ -1,0 +1,17 @@
+.header {
+	background-color: brown;
+	display: flex;
+	gap: 10px;
+
+	.iconTag {
+		margin-left: 1rem;
+	}
+
+	.nav {
+		margin: 0 auto 0 auto;
+	}
+
+	.avatar {
+		margin-right: 1rem;
+	}
+}
