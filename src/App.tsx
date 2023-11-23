@@ -1,11 +1,7 @@
-import Home from './pages/Home'
+import { useRoutes } from 'react-router-dom'
+import routers from './routers'
 
-function App() {
-	return (
-		<>
-			<Home></Home>
-		</>
-	)
+export default function App() {
+	const outlet = useRoutes(routers)
+	return outlet
 }
-
-export default App

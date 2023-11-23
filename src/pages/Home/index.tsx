@@ -1,10 +1,10 @@
-// 导入头部组件
-import Header from '../../components/Home/Header'
+import Sider from '../../components/Home/Sider'
 
 export default function Home() {
 	return (
 		<>
-			<Header/>
+			<div>介绍</div>
+			<Sider></Sider>
 		</>
 	)
 }
