@@ -19,6 +19,10 @@ const routers = [
 		],
 	},
 	{
+		path: '/login',
+		element: <div>Login</div>,
+	},
+	{
 		path: '*',
 		element: <div>404......</div>,
 	},

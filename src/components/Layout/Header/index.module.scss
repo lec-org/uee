@@ -8,15 +8,24 @@
 
 	.iconTag {
 		margin-left: 1rem;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.nav {
 		margin: 0 auto 0 auto;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.avatar {
 		border-radius: 50%;
 		border: 1px solid #000;
 		margin-right: 1rem;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
