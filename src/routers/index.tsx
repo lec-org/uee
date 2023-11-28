@@ -1,6 +1,8 @@
 import Home from '../pages/Home'
 import Layout from '../pages/Layout'
+import Login from '../pages/Login'
 import ProblemsetAll from '../pages/ProblemSet/All'
+import Register from '../pages/Register'
 
 const routers = [
 	{
@@ -19,7 +21,11 @@ const routers = [
 	},
 	{
 		path: '/login',
-		element: <div>Login</div>,
+		element: <Login />,
+	},
+	{
+		path: '/register',
+		element: <Register />,
 	},
 	{
 		path: '*',

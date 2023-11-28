@@ -1,17 +1,19 @@
-import { useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import styles from './index.module.scss'
 
 export default function Navs(props: { className: string }) {
-	const navgateTo = useNavigate()
-
 	return (
 		<div className={props.className}>
-			<span
-				onClick={() => {
-					navgateTo('/all')
-				}}
-			>
-				题库
-			</span>
+			<nav className={styles['navs']}>
+				<NavLink
+					to='all'
+					className={({ isActive }) =>
+						isActive ? styles['navActive'] : void 0
+					}
+				>
+					题库
+				</NavLink>
+			</nav>
 		</div>
 	)
 }

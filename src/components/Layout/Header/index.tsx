@@ -6,22 +6,32 @@ import Avatar from './Avatar'
 import styles from './index.module.scss'
 
 // * 导入功能
-import { useNavigate } from 'react-router-dom'
+// import Home from '../../../pages/Home'
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
 
 export default function Header() {
-	// * 创建路由钩子
-	const navTo = useNavigate()
+	const isLogin = useRef(false)
+
 	return (
 		<>
 			<div className={styles['header']}>
-				<div
-					className={styles['iconTag']}
-					onClick={() => navTo('/')}
-				>
-					这是图标
-				</div>
+				<Link to='/'>
+					<div className={styles['iconTag']}>这是图标</div>
+				</Link>
 				<Navs className={styles['nav']}></Navs>
-				<Avatar className={styles['avatar']}></Avatar>
+				{isLogin ? (
+					<div className='account'>
+						<Link to='/login'>
+							<button>登录</button>
+						</Link>
+						<Link to="register">
+							<button>注册</button>
+						</Link>
+					</div>
+				) : (
+					<Avatar className={styles['avatar']}></Avatar>
+				)}
 			</div>
 		</>
 	)
