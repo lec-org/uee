@@ -2,6 +2,7 @@ import Home from '../pages/Home'
 import Layout from '../pages/Layout'
 import Login from '../pages/Login'
 import ProblemsetAll from '../pages/ProblemSet/All'
+import IdProblem from '../pages/ProblemSet/Id'
 import Register from '../pages/Register'
 
 const routers = [
@@ -18,6 +19,10 @@ const routers = [
 				element: <ProblemsetAll />,
 			},
 		],
+	},
+	{
+		path: '/problem/:id',
+		element: <IdProblem />,
 	},
 	{
 		path: '/login',
