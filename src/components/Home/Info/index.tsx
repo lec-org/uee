@@ -1,3 +1,3 @@
 export default function Info() {
-	return <div>Info</div>
+	return <div>主页信息</div>
 }

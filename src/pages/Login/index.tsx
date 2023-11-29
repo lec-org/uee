@@ -2,8 +2,10 @@ import { useRef } from 'react'
 import { userLogin } from '../../API/api'
 import { useNavigate } from 'react-router-dom'
 
+import styles from './index.module.scss'
+
 export default function Login() {
-	const ToNav = useNavigate()
+	const toPath = useNavigate()
 	// 定义ref获取DOM, 其current属性即为该DOM节点
 	const uname = useRef(null)
 	const pwd = useRef(null)
@@ -30,7 +32,7 @@ export default function Login() {
 			const alertLogin = setTimeout(() => {
 				if (!i) {
 					clearTimeout(alertLogin)
-					ToNav('/')
+					toPath('/')
 				}
 				console.log(i--)
 			}, 1000)
@@ -39,23 +41,37 @@ export default function Login() {
 
 	return (
 		<>
-			用户名:{' '}
-			<input
-				type='text'
-				ref={uname}
-			/>
-			密码:{' '}
-			<input
-				type='password'
-				ref={pwd}
-			/>
-			<button
-				onClick={() => {
-					handleLogin(uname.current.value, pwd.current.value)
-				}}
-			>
-				登录
-			</button>
+			<div className={styles['card']}>
+				<div className={styles['title']}>Login</div>
+				{/* 用户名:{' '} */}
+				<input
+					type='text'
+					ref={uname}
+				/>
+				{/* 密码:{' '} */}
+				<input
+					type='password'
+					ref={pwd}
+				/>
+				<button
+					onClick={() => {
+						handleLogin(uname.current.value, pwd.current.value)
+					}}
+				>
+					登录
+				</button>
+				<div className={styles['info']}>
+					<span>
+						<button
+							onClick={() => {
+								toPath('/register')
+							}}
+						>
+							还没有账号？点此去注册
+						</button>
+					</span>
+				</div>
+			</div>
 		</>
 	)
 }

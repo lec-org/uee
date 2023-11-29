@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 
 export default function Header() {
-	const isLogin = useRef(false)
+	const isLogin = useRef(true)
 
 	return (
 		<>
@@ -20,12 +20,12 @@ export default function Header() {
 					<div className={styles['iconTag']}>这是图标</div>
 				</Link>
 				<Navs className={styles['nav']}></Navs>
-				{isLogin ? (
+				{!isLogin.current ? (
 					<div className='account'>
 						<Link to='/login'>
 							<button>登录</button>
 						</Link>
-						<Link to="register">
+						<Link to='register'>
 							<button>注册</button>
 						</Link>
 					</div>
