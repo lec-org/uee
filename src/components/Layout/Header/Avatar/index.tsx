@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom'
-
+import { Avatar as AvatarIcon } from '@mui/material'
 export default function Avatar(props: { className: string }) {
 	return (
 		<>
-			<NavLink to='/user/yun-xia-e'>
-				{' '}
-				<div className={props.className}>这是头像</div>
-			</NavLink>
+			<div className={props.className}>
+				<NavLink to='/user/yun-xia-e'>
+					<AvatarIcon />
+				</NavLink>
+			</div>
 		</>
 	)
 }

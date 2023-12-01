@@ -2,7 +2,7 @@ import Home from '../pages/Home'
 import Layout from '../pages/Layout'
 import Login from '../pages/Login'
 import ProblemsetAll from '../pages/ProblemSet/All'
-import IdProblem from '../pages/ProblemSet/Id'
+import SingleProblem from '../pages/ProblemSet/Single'
 import Register from '../pages/Register'
 import User from '../pages/User'
 
@@ -23,7 +23,7 @@ const routers = [
 	},
 	{
 		path: '/problem/:id',
-		element: <IdProblem />,
+		element: <SingleProblem />,
 	},
 	{
 		path: '/user/:username',

@@ -25,7 +25,7 @@ export default function Header() {
 						<Link to='/login'>
 							<button>登录</button>
 						</Link>
-						<Link to='register'>
+						<Link to='/register'>
 							<button>注册</button>
 						</Link>
 					</div>
