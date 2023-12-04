@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import MonacoEditor from 'react-monaco-editor'
-
+import SetMonacoEditor from './Monaco'
 import styles from './index.module.scss'
 
 export default function Editor() {
@@ -13,15 +12,7 @@ export default function Editor() {
 	}
 	return (
 		<div className={styles['monacoEditorContainer']}>
-			<MonacoEditor
-				width={'100%'}
-				height={'100%'}
-				language='javascript'
-				theme='vs-dark'
-				value={code}
-				options={options}
-				onChange={handleCodeChange}
-			/>
+			<SetMonacoEditor />
 		</div>
 	)
 }
