@@ -3,6 +3,7 @@ import { userLogin } from '../../API/api'
 import { useNavigate } from 'react-router-dom'
 
 import styles from './index.module.scss'
+import { Input } from '@mui/material'
 
 export default function Login() {
 	const toPath = useNavigate()
@@ -13,10 +14,11 @@ export default function Login() {
 	// 定义处理登录的函数
 	const handleLogin = async (username: string, password: string) => {
 		// 鉴定是否为空
-		if (!username.trim() || !password.trim()) {
+		if (!username?.trim() || !password?.trim()) {
 			alert('请输入用户名和密码')
 			return
 		}
+		console.log(username, password)
 
 		const params = {
 			username,
@@ -44,14 +46,16 @@ export default function Login() {
 			<div className={styles['card']}>
 				<div className={styles['title']}>Login</div>
 				{/* 用户名:{' '} */}
-				<input
+				<Input
 					type='text'
 					ref={uname}
+					placeholder='请输入用户名'
 				/>
 				{/* 密码:{' '} */}
-				<input
+				<Input
 					type='password'
 					ref={pwd}
+					placeholder='请输入密码'
 				/>
 				<button
 					onClick={() => {
