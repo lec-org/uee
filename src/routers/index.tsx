@@ -4,7 +4,7 @@ import Login from '../pages/Login'
 import ProblemsetAll from '../pages/ProblemSet/All'
 import SingleProblem from '../pages/ProblemSet/Single'
 import Register from '../pages/Register'
-import User from '../pages/User'
+import User from '..'
 
 const routers = [
 	{
@@ -19,16 +19,17 @@ const routers = [
 				path: '/all',
 				element: <ProblemsetAll />,
 			},
+			{
+				path: '/user/:username',
+				element: <User />,
+			},
 		],
 	},
 	{
 		path: '/problem/:id',
 		element: <SingleProblem />,
 	},
-	{
-		path: '/user/:username',
-		element: <User />,
-	},
+
 	{
 		path: '/login',
 		element: <Login />,

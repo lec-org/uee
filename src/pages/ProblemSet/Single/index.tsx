@@ -5,15 +5,20 @@ import TabSet from '../../../components/SingleProblem/content/TabSet'
 import Editor from '../../../components/SingleProblem/content/Editor'
 import SubmitInfo from '../../../components/SingleProblem/content/SubmitInfo'
 
+import styles from './index.module.scss'
+
 export default function SingleProblem() {
 	const { id } = useParams()
 	return (
 		<>
 			<Header />
-			<TabSet />
-			<Editor />
-			<SubmitInfo />
-			<div>这是单个题,id为{id}</div>
+			<div className={styles['content']}>
+				<TabSet />
+				<div className={styles['editor']}>
+					<Editor />
+					<SubmitInfo />
+				</div>
+			</div>
 		</>
 	)
 }
