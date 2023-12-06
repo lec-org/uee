@@ -1,0 +1,44 @@
+.Root{
+  width: 25%;
+  height: 91.80vh;
+  min-width: 300px;
+  //background-color: #eee333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .dailyProblemsBox{
+    width: 100%;
+    background-color: #147852;
+    display: flex;
+    justify-content: center;
+    .dailyProblems{
+      width: 70%;
+      height: 35vh;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #963258;
+      border-radius: 7%;
+      .hr{
+          width: 100%;
+          height: 1px;
+          background-color: #000fff;
+      }
+    }
+  }
+  .petBox{
+    width: 100%;
+    height: 40vh;
+    min-height: 100px;
+    border: #1a2b3c 1px solid;
+    position: relative;
+    .pet{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: #1a2b3c 1px solid;
+    }
+  }
+}

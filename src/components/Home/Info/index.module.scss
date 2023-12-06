@@ -1,0 +1,54 @@
+.Root{
+  width: 45%;
+  height: 100%;
+  min-width: 400px;
+  background-color: #000fff;
+  .dailyFortuneBox{
+    width: 100%;
+    background-color: #123456;
+    display: flex;
+    justify-content: center;
+    .dailyFortune{
+      width: 70%;
+      height: 45vh;
+      min-height: 200px;
+      background-color: #654321;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      .dailyFortuneTitle{
+        color: #000000;
+        font-size: 2.6em;
+      }
+      .dailyFortuneData{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .dailyFortuneButton{
+        width: 30%;
+        min-height: 40px;
+        color: #fff;
+        background-color: #f1c40f;
+        text-shadow: -2px 2px 2px rgb(209 132 0),
+                    -2px 2px 2px rgb(209 132 0),
+                    -2px 2px 2px rgb(209 132 0),
+                    -2px 2px 2px rgb(209 132 0),
+                    -2px 2px 2px rgb(209 132 0),
+                    -2px 2px 2px rgb(209 132 0);
+        box-shadow: 0px 15px 0px 0px #f39c12;
+        transition: all .5s;
+        border-radius: 20%;
+        &:hover{
+          background-color: #fcdc5e;
+        }
+        &:active {
+            transform: translate(0,4px);
+            box-shadow: 0px 1px 0px 0px #f39c12;
+        }   
+      }
+    }
+  }
+}

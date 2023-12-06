@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.Root{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .Index{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
